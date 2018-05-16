@@ -98,11 +98,6 @@ public class ParameterRequiredReader implements ParameterBuilderPlugin {
       }
     }
 
-    Optional<RequestBody> requestBody = methodParameter.findAnnotation(RequestBody.class);
-    if (requestBody.isPresent()) {
-      requiredSet.add(!optional && requestBody.get().required());
-    }
-
     Optional<RequestPart> requestPart = methodParameter.findAnnotation(RequestPart.class);
     if (requestPart.isPresent()) {
       requiredSet.add(!optional && requestPart.get().required());

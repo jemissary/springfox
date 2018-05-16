@@ -41,8 +41,7 @@ public class HostNameProvider {
 
     ServletUriComponentsBuilder builder = fromServletMapping(request, basePath);
 
-    UriComponents components = UriComponentsBuilder.fromHttpRequest(
-        new ServletServerHttpRequest(request))
+    UriComponents components = UriComponentsBuilder.fromHttpUrl(request.getRequestURL().toString())
         .build();
 
     String host = components.getHost();

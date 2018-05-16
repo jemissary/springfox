@@ -267,22 +267,6 @@ public class Defaults {
                     .responseModel(null)
                     .build()));
 
-    responses.put(PATCH, asList(
-            new ResponseMessageBuilder()
-                    .code(NO_CONTENT.value())
-                    .message(NO_CONTENT.getReasonPhrase())
-                    .responseModel(null).build(),
-            new ResponseMessageBuilder()
-                    .code(FORBIDDEN.value())
-                    .message(FORBIDDEN.getReasonPhrase())
-                    .responseModel(null)
-                    .build(),
-            new ResponseMessageBuilder()
-                    .code(UNAUTHORIZED.value())
-                    .message(UNAUTHORIZED.getReasonPhrase())
-                    .responseModel(null)
-                    .build()));
-
     responses.put(TRACE, asList(
             new ResponseMessageBuilder()
                     .code(NO_CONTENT.value())
